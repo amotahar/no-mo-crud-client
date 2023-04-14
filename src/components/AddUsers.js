@@ -6,7 +6,7 @@ const AddUsers = () => {
           event.preventDefault();
           console.log(user);
 
-          fetch('http://localhost:5000/users'{
+          fetch('http://localhost:5000/users', {
              method: 'POST',
              headers: {
               'content-type': 'application/json',
@@ -14,7 +14,12 @@ const AddUsers = () => {
             body: JSON.stringify(user)
           })
           .then(res=>res.json())
-          .then(data => console.log(data));
+          .then(data => {
+            if(data.acknowledged){
+              alert('User added successfully')
+              event.target.reset();
+            }
+          });
   }
   const handleInputBlur = event => {
   const value = event.target.value;

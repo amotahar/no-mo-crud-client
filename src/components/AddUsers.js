@@ -18,8 +18,9 @@ const AddUsers = () => {
     <div>
       <h2>Please add a User</h2>
         <form action="" onSubmit={handleAddUser}>
-              <input onBlur={handleInputBlur} type="name" name="name" id="" placeholder="name" /> <br />
-              <input  onBlur={handleInputBlur} type="email" name="email" id="" placeholder="email" /> <br />
+              <input onBlur={handleInputBlur} type="name" name="name" id="" placeholder="name" required/> <br />
+              <input  onBlur={handleInputBlur} type="name" name="address" id="" placeholder="address" required/> <br />
+              <input  onBlur={handleInputBlur} type="email" name="email" id="" placeholder="email" required/> <br />
               <button type='submit'>Add User</button>
         </form>
     </div>

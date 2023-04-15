@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 
-const AddUsers = () => {
-  const [user, setUser] = useState({});
+const AddUser = () => {
+    const [user, setUser] = useState({});
 
     const handleAddUser = event =>{
         event.preventDefault();
@@ -44,7 +45,7 @@ const AddUsers = () => {
                 <button type="submit">Add User</button>
             </form>
         </div>
-  );
+    );
 };
 
-export default AddUsers;
+export default AddUser;

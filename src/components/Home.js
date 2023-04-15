@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 
 const Home = () => {
-  const users = useLoaderData();
+    const users = useLoaderData();
     const [displayUsers, setDisplayUsers] = useState(users);
 
     const handleDelete = user => {
@@ -45,7 +46,7 @@ const Home = () => {
                 }
             </div>
         </div>
-  );
+    );
 };
 
 export default Home;
